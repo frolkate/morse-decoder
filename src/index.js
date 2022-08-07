@@ -51,18 +51,14 @@ function decode(expr) {
     for(let i = 0; i < words.length; i ++){
         Letters = words[i].match(re);
         for(let j = 0; j < Letters.length; j ++){
-          console.log(Letters[j]);
             pos = Letters[j].indexOf('1');
-            console.log(pos);
             for(let k = pos; k < 9; k +=2){
             if(Letters[j][k] == 1 && Letters[j][k + 1] == 0)  
              curLetter += '.';
              if(Letters[j][k] == 1 && Letters[j][k + 1] == 1)  
              curLetter += '-';
             }
-          console.log(curLetter);
           rezult += MORSE_TABLE[curLetter];
-          console.log(MORSE_TABLE[curLetter]);
           curLetter = '';
         }
         rezult+=' ';
