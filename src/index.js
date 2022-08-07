@@ -63,6 +63,7 @@ function decode(expr) {
         }
         rezult+=' ';
     }
+    rezult = rezult.slice(0, -1);
   return rezult;
 }
 
